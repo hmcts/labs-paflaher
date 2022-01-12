@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  paflaher:
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    image: hmctspublic.azurecr.io/labs/paflaher
+    ports:
+      - $SERVER_PORT:$SERVER_PORT
